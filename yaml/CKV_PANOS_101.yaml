@@ -1,0 +1,12 @@
+---
+metadata:
+  name: "Ensure that IKE Gateway are not using ip as Peer IP TYPE"
+  id: "CKV_PANOS_101"
+  category: "GENERAL_SECURITY"
+definition:
+  cond_type: attribute
+  resource_types:
+    - panos_ike_gateway
+  attribute: peer_ip_type
+  operator: not_contains
+  value: ip
