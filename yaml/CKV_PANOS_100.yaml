@@ -1,0 +1,12 @@
+---
+metadata:
+  name: "Ensure that Palo Alto Firewall policies are not using destination_zones with Internet"
+  id: "CKV_PANOS_100"
+  category: "GENERAL_SECURITY"
+definition:
+  cond_type: attribute
+  resource_types:
+    - panos_security_rule_group
+  attribute: destination_zones
+  operator: not_contains
+  value: Internet
