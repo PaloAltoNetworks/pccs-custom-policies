@@ -1,0 +1,12 @@
+metadata:
+ name: "GCP Folder IAM Policy Change"
+ id: "CKV2_GCP_998"
+ category: "IAM"
+definition:
+ cond_type: "attribute"
+ resource_types: 
+ - "google_folder_iam_policy"
+ - "google_folder_iam_binding"
+ - "google_folder_iam_member"
+ attribute: "folder"
+ operator: "not_exists"
